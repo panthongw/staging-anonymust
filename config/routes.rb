@@ -1,9 +1,19 @@
 Karmy::Application.routes.draw do
+  get "home/index"
+
+  get "home/about"
+
+  get "home/terms"
+
+  get "home/contact"
+
   match '/auth/:provider/callback' => 'authentications#create'
   
   resources :authentications
 
   devise_for :users, :controllers => {:registrations => 'registrations'}
+
+  root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
