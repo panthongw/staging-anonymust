@@ -16,8 +16,7 @@ class User < ActiveRecord::Base
     name = omniauth.info.name.split(' ')
     self.first_name = name[0]
     self.last_name = name[1]
-    self.image_url = omniauth.info.image
-  	authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+  	authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'], :image_url => omniauth['info']['image'])
   end
 
   def password_required?
