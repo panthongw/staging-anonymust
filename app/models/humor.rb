@@ -1,0 +1,2 @@
+class Humor < Post
+end

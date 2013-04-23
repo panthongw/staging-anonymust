@@ -1,0 +1,2 @@
+class Hookup < Post
+end

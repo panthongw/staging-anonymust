@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  references: 
+  sender_id: 1
+  recipient_email: MyString
+  token: MyString
+  accepted: false
+
+two:
+  references: 
+  sender_id: 1
+  recipient_email: MyString
+  token: MyString
+  accepted: false

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>
+      One of your friends wanted to give you an Anonymust Compliment:
+    </p>
+    <p>"<%= @post.content %>"</p>
+    <p>
+      Want to guess who? Click here: <%= post_url(@post) %>?token=<%= @invitation.token %>
+    </p>
+  </body>
+</html>
