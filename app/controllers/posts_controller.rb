@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +15,6 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-    @comments = Comment.find_by_post_id(@post.id)
     @comment = Comment.new
     
     respond_to do |format|

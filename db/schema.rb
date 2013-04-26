@@ -34,11 +34,12 @@ ActiveRecord::Schema.define(:version => 20130423014556) do
   create_table "invitations", :force => true do |t|
     t.integer  "post_id"
     t.integer  "sender_id"
+    t.string   "recipient_name"
     t.string   "recipient_email"
     t.string   "token"
-    t.boolean  "accepted"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.boolean  "accepted",        :default => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
   create_table "networks", :force => true do |t|

@@ -7,6 +7,7 @@ gem 'rails', '3.2.11'
 
 group :development do
 	gem 'sqlite3'
+  gem 'forgery'
 end
 
 group :production do
@@ -30,6 +31,7 @@ group :assets do
 	gem "twitter-bootstrap-rails"
 end
 
+gem 'masonry-rails'
 gem 'jquery-rails'
 gem 'devise'
 gem 'omniauth'

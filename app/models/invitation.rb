@@ -1,7 +1,7 @@
 class Invitation < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :post
-  attr_accessible :accepted, :recipient_email, :post_id, :sender_id, :token
+  attr_accessible :accepted, :recipient_name, :recipient_email, :post_id, :sender_id, :token
 
   before_create :generate_token
 

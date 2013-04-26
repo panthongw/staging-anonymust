@@ -1,22 +1,19 @@
-<h1>Listing posts</h1>
+<div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
+	<% index = 0 %>
+	<% @posts.each do |post| %>
+	  <% index = index + 1 %>
+	  <div class="<%="box col"+index.to_s %>">
+	  	<p>To: <%= post.invitation.recipient_name %></p>
+	    <p>"<%= post.content %>"</p>
+	    <ul>
+	    	<% post.comments.each do |comment| %>
+	    		<li><%= comment.content %></li>
+	    	<% end %>
+	    </ul>
+	  </div>
+	  <% index = 0 if index == 3 %>
+	<% end %>
+</div>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Content</th>
-    <th>Type</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.content %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
 
 <%= link_to 'New Post', new_post_path %>
