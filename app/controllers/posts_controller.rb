@@ -3,8 +3,8 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-    @comment = Comment.new
 
+    @post = Post.new
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }

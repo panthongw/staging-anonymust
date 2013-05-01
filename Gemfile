@@ -26,13 +26,17 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem "therubyracer"
-	gem "less-rails"
-	gem "twitter-bootstrap-rails"
+  # gem "therubyracer"
+	# gem "less-rails"
+	# gem "twitter-bootstrap-rails"
+  gem 'bootstrap-sass'
 end
 
-gem 'masonry-rails'
+# JQuery
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'masonry-rails'
+
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-twitter'

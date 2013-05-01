@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Rake::Task['db:migrate:reset'].invoke
+#Rake::Task['db:migrate:reset'].invoke
 
 10.times do |i|
 	@user = User.new(:email => "email#{i}@m.com",
@@ -21,6 +21,7 @@ end
 20.times do |i|
 	@post = Post.new(:user_id => Random.rand(1..(User.count)),
 									 :content => Forgery(:lorem_ipsum).words(20+(Random.rand(5..50))),
+									 :signature => Forgery(:address).street_name,
 									 :type => "Compliment")
 	@post.save
 
