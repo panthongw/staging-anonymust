@@ -6,15 +6,3 @@
   #		$('#new_note_dialog').dialog("show");
   #	});
 
-$(function(){  
-	$('#masonry-container').masonry({
-	    itemSelector: '.box',
-	    columnWidth: 300,
-	    isAnimated: !Modernizr.csstransitions,
-	    isFitWidth: true
-	});
-	$('#new-note-btn').click(function(){
-  		alert("Working");
- 	});
-	
-});

@@ -10,19 +10,13 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-// JQuery
 //= require jquery
 //= require jquery_ujs
-//
-// JQuery UI
 //= require jquery-ui
-//
-// Jquery Masonry
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag
 //= require masonry/jquery.imagesloaded.min
 //= require masonry/jquery.infinitescroll.min
 //= require masonry/modernizr-transitions
-//
-// Loads all Bootstrap javascripts
-//= require bootstrap
+//= require_tree .
+//= require_self
